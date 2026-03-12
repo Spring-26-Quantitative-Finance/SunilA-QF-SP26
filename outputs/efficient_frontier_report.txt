@@ -1,0 +1,66 @@
+Efficient Frontier Project Report
+===================================
+
+Tickers: JPM, KO, XOM, JNJ, WMT, DIS, IBM
+Lookback: ~2 years (daily)
+Risk-free rate (annual): 0.0300
+
+Inputs (annualized from daily log returns)
+----------------------------------------
+Expected Returns (mu):
+Ticker
+DIS   -0.040202
+IBM    0.169803
+JNJ    0.236142
+JPM    0.239638
+KO     0.159061
+WMT    0.373292
+XOM    0.196455
+
+Covariance Matrix:
+          JPM        KO       XOM       JNJ       WMT       DIS       IBM
+JPM  0.064080  0.001667  0.016525  0.003787  0.013658  0.034071  0.027313
+KO   0.001667  0.025206  0.005943  0.011811  0.009273  0.003339  0.005420
+XOM  0.016525  0.005943  0.050608  0.006698  0.004102  0.019774  0.008762
+JNJ  0.003787  0.011811  0.006698  0.032244  0.006925  0.003429  0.003266
+WMT  0.013658  0.009273  0.004102  0.006925  0.051544  0.011869  0.010020
+DIS  0.034071  0.003339  0.019774  0.003429  0.011869  0.076525  0.022101
+IBM  0.027313  0.005420  0.008762  0.003266  0.010020  0.022101  0.089820
+
+Monte Carlo Results
+----------------------------------------
+Simulated portfolios: 50,000
+
+Max Sharpe Portfolio
+Return: 0.2798
+Vol:    0.1369
+Sharpe: 1.8248
+Sharpe Weights:
+  JPM: 0.0000
+  KO: 0.0139
+  XOM: 0.2385
+  JNJ: 0.1750
+  WMT: 0.1043
+  DIS: 0.3993
+  IBM: 0.0689
+
+Min Vol Portfolio
+Return: 0.2091
+Vol:    0.1169
+Sharpe: 1.5316
+Min Vol Weights:
+  JPM: 0.0440
+  KO: 0.0644
+  XOM: 0.2203
+  JNJ: 0.0774
+  WMT: 0.2937
+  DIS: 0.1338
+  IBM: 0.1663
+
+Files Saved
+----------------------------------------
+efficient_frontier_correlation_matrix.png
+efficient_frontier_frontier.png
+efficient_frontier_optimal_sharpe_weights.csv
+efficient_frontier_optimal_min_vol_weights.csv
+efficient_frontier_report.txt
